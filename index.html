@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asmoria - Gadget</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- unpkg  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+      <div class="animated-blob blob-1"></div>
+      <div class="animated-blob blob-2"></div>
+      <div class="animated-blob blob-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <!-- container  -->
+      <div class="container">
+        <!-- logo  -->
+        <a class="navbar-brand" href="#home">
+          <img src="./assets/logo/light-logo.png" alt="Logo" id="themeLogo" class="logo-img" />
+        </a>
+        <!-- button navbar for tab & mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- nav -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- container nav  -->
+          <ul class="navbar-nav ms-auto">
+            <!-- product  -->
+            <li class="nav-item">
+              <a class="nav-link" href="#products" data-aos="fade-right" data-aos-delay="300">Produk</a>
+            </li>
+            <!-- about  -->
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-aos="fade-right" data-aos-delay="600">Tentang Kami</a>
+            </li>
+            <!-- contact  -->
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-aos="fade-right" data-aos-delay="900">Kontak</a>
+            </li>
+          </ul>
+          <!-- container login  -->
+          <div class="ms-3 d-flex">
+            <!-- login  -->
+            <a href="#" class="btn btn-outline-primary me-2" data-aos="zoom-in" data-aos-delay="1200">Login</a>
+            <!-- register  -->
+            <a href="#" class="btn btn-primary" data-aos="zoom-in" data-aos-delay="1500">Register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Bar dan toogle theme -->
+    <section class="mt-3" id="home" data-aos="fade-down" data-aos-delay="1500">
+      <div class="container">
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Cari produk..." />
+          </div>
+
+          <!-- Cart -->
+          <div class="cart-wrapper">
+            <button class="btn btn-outline-primary position-relative" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount"> 0 </span>
+            </button>
+          </div>
+
+          <!-- Toogle theme  -->
+          <div class="theme-toggle-container">
+            <button id="themeToggleBtn" class="btn btn-outline-primary">
+              <i id="themeIcon" class="fas fa-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section mb-5" data-aos="fade-up" data-aos-delay="100">
+      <!-- container  -->
+      <div class="container">
+        <!-- wrapper row-->
+        <div class="row align-items-center">
+          <!-- collumn 1 -->
+          <div class="col-lg-6">
+            <!-- title -->
+            <div class="hero-text-wrapper">
+              <h1 class="hero-title">
+                <span class="text-animate">Toko</span>
+                <span class="text-animate">Gadget</span>
+              </h1>
+              <h2 class="hero-subtitle">
+                <span class="text-gradient" data-aos="zoom-in" data-aos-delay="1200">Asmoria</span>
+              </h2>
+            </div>
+            <!-- sentence -->
+            <p class="lead mb-4" data-aos="fade-right" data-aos-delay="1500">Temukan berbagai macam produk elektronik berkualitas dengan harga terbaik dan pelayanan yang memuaskan.</p>
+            <!-- button product  -->
+            <div class="hero-buttons">
+              <a href="#products" class="btn btn-primary btn-hero" data-aos="zoom-in" data-aos-delay="1800">
+                <span class="btn-content">
+                  <i class="fas fa-shopping-bag me-2"></i>
+                  Lihat Produk
+                </span>
+              </a>
+              <a href="#about" class="btn btn-outline-primary btn-hero" data-aos="zoom-in" data-aos-delay="1800">
+                <span class="btn-content">
+                  <i class="fas fa-info-circle me-2"></i>
+                  Tentang Kami
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- collumn 2  -->
+          <div class="col-lg-6 text-center">
+            <!-- img  -->
+            <div class="mascot-wrapper">
+              <img src="/assets/hero/hero.png" alt="Character Mascot" class="character-mascot" data-aos="zoom-in" data-aos-delay="2000" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- dots animated  -->
+      <div class="floating-dots dot-1"></div>
+      <div class="floating-dots dot-2"></div>
+      <div class="floating-dots dot-3"></div>
+      <div class="floating-dots dot-4"></div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-3 mb-5" id="featured" data-aos="fade-up" data-aos-delay="300">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Produk Terlaris</h2>
+        <div class="row gy-4">
+          <!-- Product 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="text-center">
+                <img src="/assets/produk/iphone.gif" alt="iPhone X" class="product-image" data-aos="zoom-in" data-aos-delay="100" />
+              </div>
+              <h3 data-aos="fade-right" data-aos-delay="100">iPhone X</h3>
+              <p class="mb-3" data-aos="fade-right" data-aos-delay="100">Smartphone terbaru Apple dengan kualitas terbaik menciptakan revolusi dalam teknologi smartphone dengan kamera premium.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold product-price" data-aos="fade-right" data-aos-delay="100">Rp. 10.999.000</span>
+                <button class="btn btn-primary add-to-cart" data-product="iPhone X" data-aos="zoom-in" data-aos-delay="100">Beli</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="text-center">
+                <img src="/assets/produk/earwhite.gif" alt="Earwhite TWS" class="product-image" data-aos="zoom-in" data-aos-delay="100" />
+              </div>
+              <h3 data-aos="fade-right" data-aos-delay="100">Earwhite TWS</h3>
+              <p class="mb-3" data-aos="fade-right" data-aos-delay="100">Bluetooth audio berkualitas tinggi. Produk ini cocok karena nyaman dipakai</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold product-price" data-aos="fade-right" data-aos-delay="100">Rp. 1.299.000</span>
+                <button class="btn btn-primary add-to-cart" data-product="Earwhite TWS" data-aos="zoom-in" data-aos-delay="100">Beli</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="text-center">
+                <img src="/assets/produk/macbook-air.gif" alt="MacBook Air" class="product-image" data-aos="zoom-in" data-aos-delay="100" />
+              </div>
+              <h3 data-aos="fade-right" data-aos-delay="100">MacBook Air</h3>
+              <p class="mb-3" data-aos="fade-right" data-aos-delay="100">Laptop premium dari Apple dengan processor cepat. Dilengkapi touchpad precision dengan garansi resmi yang terdaftar.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold product-price" data-aos="fade-right" data-aos-delay="100">Rp. 18.999.000</span>
+                <button class="btn btn-primary add-to-cart" data-product="MacBook Air" data-aos="zoom-in" data-aos-delay="100">Beli</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="py-5 product-tab-section" id="products" data-aos="fade-up" data-aos-delay="100">
+      <!-- container  -->
+      <div class="container">
+        <!-- sub-title -->
+        <h2 class="section-title">Produk Kami</h2>
+        <!-- nav tab  -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="productTabs" role="tablist" data-aos="fade-in" data-aos-delay="100">
+          <!-- tab 1  -->
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="hp-tab" data-bs-toggle="pill" data-bs-target="#hp" type="button" role="tab" aria-controls="hp" aria-selected="true">HP</button>
+          </li>
+          <!-- tab 2 -->
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tablet-tab" data-bs-toggle="pill" data-bs-target="#tablet" type="button" role="tab" aria-controls="tablet" aria-selected="false">Tablet</button>
+          </li>
+          <!-- tab 3  -->
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="laptop-tab" data-bs-toggle="pill" data-bs-target="#laptop" type="button" role="tab" aria-controls="laptop" aria-selected="false">Laptop</button>
+          </li>
+        </ul>
+        <!-- container tab content  -->
+        <div class="tab-content" id="productTabsContent">
+          <!-- tab pane for 'hp'  -->
+          <div class="tab-pane fade show active" id="hp" role="tabpanel" aria-labelledby="hp-tab">
+            <!-- wrapper row  -->
+            <div class="row">
+              <!-- collumn 1  -->
+              <div class="col-md-4">
+                <!-- card 1  -->
+                <div class="product-item" data-aos="fade-right" data-aos-delay="100">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/samsung-s22.png" alt="Samsung S22" class="img-fluid" data-aos="zoom-in" data-aos-delay="100" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Samsung S22</h3>
+                    <p class="product-price">Rp. 12.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Samsung S22">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 2  -->
+              <div class="col-md-4">
+                <!-- card 2  -->
+                <div class="product-item" data-aos="fade-right" data-aos-delay="150">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/iphone-14.png" alt="iPhone 14 Pro Max" class="img-fluid" data-aos="zoom-in" data-aos-delay="100" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">iPhone 14 Pro Max</h3>
+                    <p class="product-price">Rp. 21.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="iPhone 14 Pro Max">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 3  -->
+              <div class="col-md-4">
+                <!-- card 3  -->
+                <div class="product-item" data-aos="fade-right" data-aos-delay="200">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/asus-rog.png" alt="Xiaomi 13T" class="img-fluid" data-aos="zoom-in" data-aos-delay="100" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Asus ROG</h3>
+                    <p class="product-price">Rp. 8.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Xiaomi 13T">Beli</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tab pane for 'tablet' -->
+          <div class="tab-pane fade" id="tablet" role="tabpanel" aria-labelledby="tablet-tab">
+            <!-- wrapper row  -->
+            <div class="row">
+              <!-- collumn 1  -->
+              <div class="col-md-4">
+                <!-- card 1  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/iPad.png" alt="iPad Pro" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Ipad Pro</h3>
+                    <p class="product-price">Rp. 14.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="iPad Pro">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 2  -->
+              <div class="col-md-4">
+                <!-- card 2  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/samsung-pad.png" alt="Samsung Tab S8" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Samsung Tab S8</h3>
+                    <p class="product-price">Rp. 11.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Samsung Tab S8">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 3  -->
+              <div class="col-md-4">
+                <!-- card 3  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/xiaomi-pad.png" alt="Samsung Tab S8" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Xiaomi Pad 6</h3>
+                    <p class="product-price">Rp. 6.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Xiaomi Pad 6">Beli</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tab pane for 'laptop' -->
+          <div class="tab-pane fade" id="laptop" role="tabpanel" aria-labelledby="laptop-tab">
+            <!-- wrapper row  -->
+            <div class="row">
+              <!-- collumn 1  -->
+              <div class="col-md-4">
+                <!-- card 1  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/laptop-samsung.png" alt="Macbook Air" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">MacBook Air</h3>
+                    <p class="product-price">Rp. 18.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="MacBook Air">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 2  -->
+              <div class="col-md-4">
+                <!-- card 2  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/laptop-rog.png" alt="Asus ROG" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Asus ROG</h3>
+                    <p class="product-price">Rp. 17.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Asus ROG">Beli</button>
+                  </div>
+                </div>
+              </div>
+              <!-- collumn 3 -->
+              <div class="col-md-4">
+                <!-- card 3  -->
+                <div class="product-item">
+                  <div class="product-image-container">
+                    <div class="product-image-wrapper">
+                      <img src="/assets/produk/laptop-lenovo.png" alt="Lenovo Thinkpad" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3 class="product-title">Lenovo ThinkPad</h3>
+                    <p class="product-price">Rp. 16.999.000</p>
+                    <button class="btn btn-primary add-to-cart" data-product="Lenovo ThinkPad">Beli</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5" id="about" data-aos="fade-up" data-aos-delay="100">
+      <!-- container  -->
+      <div class="container">
+        <!-- sub-title  -->
+        <h2 class="section-title">Mengapa Harus Asmoria?</h2>
+        <!-- wrapper row  -->
+        <div class="row">
+          <!-- collumn 1  -->
+          <div class="col-md-6">
+            <!-- sentence -->
+            <p class="lead mb-4" data-aos="fade-right" data-aos-delay="100">
+              Di Asmoria, Anda akan mendapatkan pengalaman berbelanja yang mudah dan nyaman dengan layanan pelanggan yang profesional serta harga yang kompetitif. Setiap produk kami dilengkapi dengan garansi resmi, sehingga Anda bisa merasa
+              tenang dan puas dengan pembelian Anda.
+            </p>
+            <!-- card 1  -->
+            <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-check-circle text-success me-3 fa-2x"></i>
+              <div>
+                <h5 class="mb-1">Garansi Resmi</h5>
+                <p class="mb-0">Semua produk kami dilengkapi dengan garansi resmi dari pabrik.</p>
+              </div>
+            </div>
+            <!-- card 2  -->
+            <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-shipping-fast text-primary me-3 fa-2x"></i>
+              <div>
+                <h5 class="mb-1">Pengiriman Cepat</h5>
+                <p class="mb-0">Kami mengirimkan pesanan Anda dalam waktu 24 jam setelah pembayaran.</p>
+              </div>
+            </div>
+            <!-- card 3  -->
+            <div class="d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-headset text-warning me-3 fa-2x"></i>
+              <div>
+                <h5 class="mb-1">Layanan 24/7</h5>
+                <p class="mb-4">Tim dukungan pelanggan kami siap membantu Anda kapan saja.</p>
+              </div>
+            </div>
+          </div>
+          <!-- collumn 2  -->
+          <div class="col-md-6">
+            <!-- wrapper row for collumn 2  -->
+            <div class="row">
+              <!-- c2 - collumn 1  -->
+              <div class="col-md-6 mb-4">
+                <!-- c2 - card 1  -->
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                  <i class="fas fa-certificate feature-icon"></i>
+                  <h3 class="feature-title">Produk Berkualitas</h3>
+                  <p>Kami hanya menjual produk asli dengan kualitas terbaik.</p>
+                </div>
+              </div>
+              <!-- c2 - collumn 2  -->
+              <div class="col-md-6 mb-4">
+                <!-- c2 - card 2 -->
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                  <i class="fas fa-tag feature-icon"></i>
+                  <h3 class="feature-title">Harga Terbaik</h3>
+                  <p>Dapatkan produk berkualitas dengan harga yang bersahabat.</p>
+                </div>
+              </div>
+              <!-- c2 - collumn 3 -->
+              <div class="col-md-6 mb-4">
+                <!-- c2 - card 3 -->
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                  <i class="fas fa-sync-alt feature-icon"></i>
+                  <h3 class="feature-title">Garansi Pengembalian</h3>
+                  <p>30 hari jaminan uang kembali jika ada masalah dengan produk.</p>
+                </div>
+              </div>
+              <!-- c2 - collumn 4 -->
+              <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <!-- c2 - card 4 -->
+                <div class="feature-box">
+                  <i class="fas fa-shield-alt feature-icon"></i>
+                  <h3 class="feature-title">Pembayaran Aman</h3>
+                  <p>Transaksi aman dengan berbagai metode pembayaran.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register CTA -->
+    <section class="py-5 register-section" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="text-center mb-4 mb-lg-0">
+              <img src="assets/Register/register.png" alt="Register Illustration" class="img-fluid img-cta" data-aos="fade-up" data-aos-delay="100" />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h1 mb-4" data-aos="fade-right" data-aos-delay="100">Belum Daftar Akun Asmoria?</h2>
+            <p class="lead mb-4" data-aos="fade-right" data-aos-delay="100">
+              Nikmati akses mudah ke semua fitur hanya dengan beberapa langkah sederhana. Daftarkan email dan nomor telepon Anda, dan siap untuk menikmati layanan kami dalam hitungan detik. Ayo, jangan sampai ketinggalan!
+            </p>
+            <button class="btn btn-lg btn-primary px-5" id="registerBtn" data-aos="zoom-in" data-aos-delay="100">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="py-5" data-aos="fade-up" data-aos-delay="300">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <h2 class="h1 mb-4" data-aos="fade-left" data-aos-delay="300">Mau tahu <span class="text-warning">promo menarik</span> dan <span class="text-primary">paket spesial</span>?</h2>
+            <p class="lead mb-4" data-aos="fade-left" data-aos-delay="300">Hubungi kami sekarang untuk mendapatkan informasi tentang penawaran terbaru dan diskon eksklusif!</p>
+            <button class="btn btn-lg btn-primary px-5" id="contactPromoBtn" data-aos="zoom-in" data-aos-delay="300">Hubungi Kami</button>
+          </div>
+          <div class="col-md-5">
+            <div class="text-center">
+              <img src="./assets/promo/promo.png" alt="Promo Illustration" class="img-fluid img-promo" data-aos="fade-down" data-aos-delay="300" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5 contact-section" id="contact" data-aos="fade-up" data-aos-delay="300">
+      <div class="container">
+        <h2 class="section-title">Tanyakan Kami!</h2>
+        <div class="contact-form">
+          <form id="contactForm" data-aos="fade-up" data-aos-delay="300">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nama lengkap Anda" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="email@example.com" />
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subjek</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subjek pesan Anda" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Tuliskan pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary px-4">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h3 class="footer-title">Asmoria</h3>
+            <p>Asmoria, solusi Gadget anda! Lengkap, terpercaya, harga bersahabat!</p>
+            <div class="mt-4">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <h4 class="footer-title">Kategori</h4>
+            <a href="#" class="footer-link">Smartphone</a>
+            <a href="#" class="footer-link">Laptop</a>
+            <a href="#" class="footer-link">Tablet</a>
+            <a href="#" class="footer-link">Aksesoris</a>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <h4 class="footer-title">Informasi</h4>
+            <a href="#" class="footer-link">Tentang Kami</a>
+            <a href="#" class="footer-link">Kontak</a>
+            <a href="#" class="footer-link">FAQ</a>
+            <a href="#" class="footer-link">Blog</a>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h4 class="footer-title">Kontak Kami</h4>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Raya Bancaran, Bangkalan</p>
+            <p><i class="fas fa-phone-alt me-2"></i> +62-857-9146-9949 (Indonesia)</p>
+            <p><i class="fas fa-envelope me-2"></i> Asmoria@gadget.com</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Asmoria. All Rights Reserved. <br />Made with <i class="fas fa-heart"></i> by <a href="https://www.linkedin.com/in/abdul-rohman-maulidhi/" target="_blank">Rohman</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Toast -->
+    <div class="custom-toast" id="customToast">Produk ditambahkan ke keranjang!</div>
+
+    <!-- Bootstrap Bundle -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <!-- unpkg  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+      // fade-up
+      // fade-down
+      // fade-right
+      // fade-left
+      // zoom-in
+      // zoom-out
+      // slide-up
+      // slide-down
+      // flip-left
+      // flip-right
+    </script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
