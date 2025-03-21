@@ -1,3 +1,26 @@
+// Toogle visibility at password functionality
+function tooglePasswordVisibility() {
+    const elements = {
+        toggleLogin: document.getElementById('toggleLoginPassword'),
+        loginPassword: document.getElementById('loginPassword'),
+        toggleRegister: document.getElementById('toggleRegisterPassword'),
+        registerPassword: document.getElementById('registerPassword'),
+        toggleConfirm: document.getElementById('toggleConfirmPassword'),
+        confirmPassword: document.getElementById('confirmPassword')
+    };
+
+    function toggleVisibility(inputField, button) {
+        const type = inputField.getAttribute('type') === 'password' ? 'text' : 'password';
+        inputField.setAttribute('type', type);
+        button.querySelector('i').classList.toggle('fa-eye');
+        button.querySelector('i').classList.toggle('fa-eye-slash');
+    }
+
+    // Event listeners for password toggles
+    elements.toggleLogin.addEventListener('click', () => toggleVisibility(elements.loginPassword, elements.toggleLogin));
+    elements.toggleRegister.addEventListener('click', () => toggleVisibility(elements.registerPassword, elements.toggleRegister));
+    elements.toggleConfirm.addEventListener('click', () => toggleVisibility(elements.confirmPassword, elements.toggleConfirm));
+}
 
 // Add to cart functionality
 function addToCart() {
@@ -149,7 +172,12 @@ function toogleTheme() {
 
     // Function to update logo
     function updateLogo(isDark) {
-        themeLogo.src = isDark ? 'assets/logo/black-logo.png' : 'assets/logo/light-logo.png';
+        themeLogo.src = isDark ? './assets/logo/dark-logo.png' : './assets/logo/light-logo.png';
+    }
+
+    function updateLogoLoginRegister(isDark) {
+        loginThemeLogo.src = isDark ? './assets/logo/dark-logo.png' : './assets/logo/light-logo.png';
+        registerThemeLogo.src = isDark ? './assets/logo/dark-logo.png' : './assets/logo/light-logo.png';
     }
 
     // Apply saved theme
@@ -262,6 +290,7 @@ function productTabsAutoScroll() {
 document.addEventListener('DOMContentLoaded', function () {
     addToCart();
     registerButton();
+    tooglePasswordVisibility();
     contactForm();
     searchBar();
     animateScroll();

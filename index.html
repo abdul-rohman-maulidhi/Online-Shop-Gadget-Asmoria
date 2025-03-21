@@ -52,14 +52,157 @@
           </ul>
           <!-- container login  -->
           <div class="ms-3 d-flex">
-            <!-- login  -->
-            <a href="#" class="btn btn-outline-primary me-2" data-aos="zoom-in" data-aos-delay="1200">Login</a>
-            <!-- register  -->
-            <a href="#" class="btn btn-primary" data-aos="zoom-in" data-aos-delay="1500">Register</a>
+            <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal" data-aos="zoom-in" data-aos-delay="1200">Masuk</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal" data-aos="zoom-in" data-aos-delay="1500">Daftar</a>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Login page -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-4 py-2">
+            <div class="text-center mb-4">
+              <h2 class="title-login">Asmoria</h2>
+              <h4 class="mt-3">Selamat Datang Kembali</h4>
+              <p class="text-muted">Silakan masuk ke akun Anda</p>
+            </div>
+
+            <!-- Social Login Buttons -->
+            <button class="social-login-btn mb-2">
+              <i class="fab fa-google"></i>
+              <span>Masuk dengan Google</span>
+            </button>
+            <button class="social-login-btn mb-3">
+              <i class="fab fa-facebook"></i>
+              <span>Masuk dengan Facebook</span>
+            </button>
+
+            <div class="divider">
+              <span>atau</span>
+            </div>
+
+            <!-- Login Form -->
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Masukkan email" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Masukkan password" required />
+                  <button class="btn btn-outline-secondary" type="button" id="toggleLoginPassword">
+                    <i class="far fa-eye-slash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberMe" />
+                  <label class="form-check-label" for="rememberMe">Ingat saya</label>
+                </div>
+                <a href="#" class="text-primary text-decoration-none">Lupa password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">Masuk</button>
+            </form>
+
+            <div class="text-center">
+              <p class="mb-0">Belum punya akun? <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Daftar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-4 py-2">
+            <div class="text-center mb-4">
+              <h2 class="title-login">Asmoria</h2>
+              <h4 class="mt-3">Buat Akun Baru</h4>
+              <p class="text-muted">Daftar untuk mulai berbelanja</p>
+            </div>
+
+            <!-- Social Register Buttons -->
+            <button class="social-login-btn mb-2">
+              <i class="fab fa-google"></i>
+              <span>Daftar dengan Google</span>
+            </button>
+            <button class="social-login-btn mb-3">
+              <i class="fab fa-facebook"></i>
+              <span>Daftar dengan Facebook</span>
+            </button>
+
+            <div class="divider">
+              <span>atau</span>
+            </div>
+
+            <!-- Register Form -->
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">Nama Depan</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Masukkan nama depan" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Nama Belakang</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Masukkan nama belakang" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Masukkan email" required />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Nomor Telepon</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+62" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="registerPassword" placeholder="Masukkan password" required />
+                  <button class="btn btn-outline-secondary" type="button" id="toggleRegisterPassword">
+                    <i class="far fa-eye-slash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Konfirmasi Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Masukkan kembali password" required />
+                  <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                    <i class="far fa-eye-slash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="terms" required />
+                  <label class="form-check-label" for="terms"> Saya setuju dengan <a href="#" class="text-primary">Syarat & Ketentuan</a> </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">Daftar</button>
+            </form>
+
+            <div class="text-center">
+              <p class="mb-0">Sudah punya akun? <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Masuk</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Search Bar dan toogle theme -->
     <section class="mt-3" id="home" data-aos="fade-down" data-aos-delay="1500">
@@ -482,7 +625,7 @@
             <p class="lead mb-4" data-aos="fade-right" data-aos-delay="100">
               Nikmati akses mudah ke semua fitur hanya dengan beberapa langkah sederhana. Daftarkan email dan nomor telepon Anda, dan siap untuk menikmati layanan kami dalam hitungan detik. Ayo, jangan sampai ketinggalan!
             </p>
-            <button class="btn btn-lg btn-primary px-5" id="registerBtn" data-aos="zoom-in" data-aos-delay="100">Daftar</button>
+            <button class="btn btn-lg btn-primary px-5" id="registerBtn" data-bs-toggle="modal" data-bs-target="#registerModal" data-aos="zoom-in" data-aos-delay="100">Daftar</button>
           </div>
         </div>
       </div>
@@ -495,7 +638,7 @@
           <div class="col-md-7">
             <h2 class="h1 mb-4" data-aos="fade-left" data-aos-delay="300">Mau tahu <span class="text-warning">promo menarik</span> dan <span class="text-primary">paket spesial</span>?</h2>
             <p class="lead mb-4" data-aos="fade-left" data-aos-delay="300">Hubungi kami sekarang untuk mendapatkan informasi tentang penawaran terbaru dan diskon eksklusif!</p>
-            <button class="btn btn-lg btn-primary px-5" id="contactPromoBtn" data-aos="zoom-in" data-aos-delay="300">Hubungi Kami</button>
+            <button onclick="window.location.href='#contact';" class="btn btn-lg btn-primary px-5" id="contactPromoBtn" data-aos="zoom-in" data-aos-delay="300">Hubungi Kami</button>
           </div>
           <div class="col-md-5">
             <div class="text-center">

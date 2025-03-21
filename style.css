@@ -965,8 +965,134 @@ body.dark-theme .logo-img {
 /* -------------------------------------- */
 
 /* -------------------------------------- */
+/* Login & Register  */
+.modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 1.5rem;
+  background: linear-gradient(120deg, #e8f0fe, #ffffff);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+/* Logo & Text Styles */
+.modal-body img {
+  transition: transform 0.3s ease;
+}
+
+.modal-body img:hover {
+  transform: scale(1.05);
+}
+
+.modal-body h4 {
+  color: #1a73e8;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.modal-body .text-muted {
+  color: #666 !important;
+}
+
+/* Modal Animation */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* title */
+.title-login {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+body.dark-theme .title-login {
+  color: white;
+}
+
+/* Social Login Buttons */
+.social-login-btn {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-login-btn:hover {
+  background: #f8f9fa;
+  border-color: #1a73e8;
+  transform: translateY(-2px);
+}
+
+.social-login-btn i {
+  font-size: 1.2rem;
+}
+
+/* divider */
+.divider {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+/* Links */
+.modal-body a {
+  transition: all 0.3s ease;
+}
+
+.modal-body a:hover {
+  color: #0d47a1 !important;
+}
+
+/* eye */
+.input-group button {
+  height: 38px;
+  color: var(--primary-color);
+  border-color: #e0e0e0;
+}
+
+.input-group button:hover {
+  color: white;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Checkbox */
+.form-check-input {
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+}
+/* end of login */
+/* -------------------------------------- */
+
+/* -------------------------------------- */
 /* Dark Theme */
-/* Base Theme Styles */
 body.dark-theme {
   background: linear-gradient(145deg, var(--dark-bg-primary), #1d1d1d);
   color: var(--dark-text-primary);
@@ -1169,8 +1295,7 @@ body.dark-theme .contact-form:hover {
 
 body.dark-theme .form-control {
   background: #f8f9fa;
-  border: 1px solid var(--dark-accent);
-  color: var(--dark-text-primary);
+  color: var(--dark-text);
 }
 
 body.dark-theme .form-control:focus {
@@ -1282,6 +1407,72 @@ body.dark-theme .copyright a:hover {
   text-decoration: underline;
   font-size: 1.05em;
   transition: all 0.3s ease;
+}
+
+/* login & register */
+body.dark-theme .modal-content {
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border: 1px solid #ffd700;
+  box-shadow: 0 5px 25px rgba(255, 215, 0, 0.2);
+}
+
+body.dark-theme .modal-header {
+  background: linear-gradient(120deg, #2a2a2a, #1a1a1a);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+body.dark-theme .btn-close {
+  filter: invert(1) brightness(200%);
+}
+
+body.dark-theme .modal-body h4 {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+body.dark-theme .modal-body .text-muted {
+  color: #bbbbbb !important;
+}
+
+body.dark-theme .social-login-btn {
+  background: rgba(42, 42, 42, 0.9);
+  border-color: #ffd700;
+  color: #ffffff;
+}
+
+body.dark-theme .social-login-btn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+body.dark-theme .modal-body a {
+  color: #ffd700 !important;
+}
+
+body.dark-theme .modal-body a:hover {
+  color: #ffa000 !important;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+body.dark-theme .form-check-input {
+  background-color: rgba(42, 42, 42, 0.9);
+  border-color: #ffd700;
+}
+
+body.dark-theme .form-check-input:checked {
+  background-color: #ffd700;
+  border-color: #ffd700;
+}
+
+body.dark-theme .input-group button {
+  height: 38px;
+  color: var(--dark-accent);
+  border-color: white;
+}
+
+body.dark-theme .input-group button:hover {
+  color: var(--dark-text);
+  background: var(--dark-accent);
 }
 /* End of Dark Theme  */
 /* -------------------------------------- */
